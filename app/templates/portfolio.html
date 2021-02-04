@@ -1,0 +1,230 @@
+{% extends "layout.html" %}
+{% block content %}
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-container">
+                            <h1>Project Portfolio</h1>
+        
+                            <a class="btn-solid-lg page-scroll" href="#projects">DISCOVER</a>
+                        </div>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of header-content -->
+    </header> <!-- end of header -->
+    <!-- end of header -->
+
+    <!-- Projects -->
+	<div id="projects" class="filter">
+		<div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">PROJECTS</div>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Filter -->
+                    <div class="button-group filters-button-group">
+                        <a class="button is-checked" data-filter="*"><span>SHOW ALL</span></a>
+                        <a class="button" data-filter=".R"><span>R</span></a>
+                        <a class="button" data-filter=".Python"><span>PYTHON</span></a>
+                        <a class="button" data-filter=".machine-learning"><span>MACHINE LEARNING</span></a>
+                        <a class="button" data-filter=".sentiment-analysis"><span>SENTIMENT ANALYSIS</span></a>
+                    </div> <!-- end of button group -->
+                    
+                    <div class="grid">
+                        <div class="element-item Python">
+                            <a class="popup-with-move-anim" href="#project-1"><div class="element-item-overlay"><span>Website Creation</span></div><img src= "{{url_for('static', filename='images/website.png')}}" alt="alternative"></a>
+                        </div>
+                        <div class="element-item R machine-learning">
+                            <a class="popup-with-move-anim" href="#project-2"><div class="element-item-overlay"><span>PNEUMONIA DETECTION</span></div><img src="{{url_for('static', filename='images/pneumonia.jpeg')}}"  alt="alternative"></a>
+                        </div>
+                        <div class="element-item Python machine-learning sentiment-analysis">
+                            <a class="popup-with-move-anim" href="#project-3"><div class="element-item-overlay"><span>FAKE NEWS IDENTIFICATION</span></div><img src="{{url_for('static', filename='images/fake-news.jpg')}}" alt="alternative"></a>
+                        </div>
+                        <div class="element-item Python">
+                            <a class="popup-with-move-anim" href="#project-4"><div class="element-item-overlay"><span>US NEWS WEBSCRAPING</span></div><img src="{{url_for('static', filename='images/library.jpg')}}" alt="alternative"></a>
+                        </div>
+                        <div class="element-item R sentiment-analysis">
+                            <a class="popup-with-move-anim" href="#project-5"><div class="element-item-overlay"><span>HISTORY OF AMHERST</span></div><img src="{{url_for('static', filename='images/amherst-college.jpg')}}" alt="alternative"></a>
+                        </div>
+                        <div class="element-item Python machine-learning">
+                            <a class="popup-with-move-anim" href="#project-6"><div class="element-item-overlay"><span>GRAD SCHOOL ADMISSIONS</span></div><img src="{{url_for('static', filename='images/school.jpg')}}" alt="alternative"></a>
+                        </div>
+                        <div class="element-item R machine-learning">
+                            <a class="popup-with-move-anim" href="#project-7"><div class="element-item-overlay"><span>CANCER TYPE PREDICTION </span></div><img src="{{url_for('static', filename='images/microscope.jpg')}}" alt="alternative"></a>
+                        </div>
+                         <div class="element-item R">
+                            <a class="popup-with-move-anim" href="#project-8"><div class="element-item-overlay"><span>Building a Data Package</span></div><img src="{{url_for('static', filename='images/street.jpg')}}" alt="alternative"></a>
+                        </div>
+                    </div> <!-- end of grid -->
+                    <!-- end of filter -->
+                    
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+		</div> <!-- end of container -->
+    </div> <!-- end of filter -->
+    <!-- end of projects -->
+
+
+    <!-- Project Lightboxes -->
+    <!-- Lightbox 1 -->
+    <div id="project-1" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <img class="img-fluid" src= "{{url_for('static', filename='images/website.png')}}" alt="alternative">
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>WEBSITE CREATION</h3>
+                <hr class="line-heading">
+                <h6>Skills: HTML, CSS, Python</h6>
+                <p>Using HTML, CSS, Python, and Flask learned how to build and then host a website on Heroku that displays an overview of projects I have worked on</p>
+                <a class="btn-solid-reg" href="https://github.com/gchickering21/website">CODE</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+
+    <!-- Lightbox 2 -->
+    <div id="project-2" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <img class="img-fluid" src="{{url_for('static', filename='images/pneumonia.jpeg')}}"  alt="alternative">
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>PNEUMONIA DETECTION</h3>
+                <hr class="line-heading">
+                <h6>Skills: R, Deep Learning, Unstructured Data</h6>
+                <p> Convolutional Neural Networks have been shown to be effective within the healthcare industry with tasks such as identifying certain types of cancers or even pneumonia from different types of scans. This project shows how to efficiently store and convert images in order to then train convolutional neural networks to detect pneumonia within patients. </p>
+                <a class="btn-solid-reg" href="https://github.com/gchickering21/Pneumonia_Detection">CODE</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+
+    <!-- Lightbox 3 -->
+    <div id="project-3" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <img class="img-fluid" src="{{url_for('static', filename='images/fake-news.jpg')}}" alt="alternative">
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>FAKE NEWS IDENTIFCATION</h3>
+                <hr class="line-heading">
+                <h6>Skills: Python, Machine Learning, Sentiment Analysis </h6>
+                <p>One of the biggest issues facing society today is the increasing prevalence of fake news that can be found all across social media and across the internet. With the large amounts of fake news article that are already pervasive on the internet, the recent developments in machine learning appear to be one of the best ways to identify fake news sources and prevent them from spreading and further eroding people’s confidence in what is true. Used both sentiment analysis and machine learning to identify which articles are real versus fake news.</p>
+                
+                <a class="btn-solid-reg" href="https://github.com/gchickering21/Fake_News_Identification">CODE</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+
+    <!-- Lightbox 4 -->
+    <div id="project-4" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <img class="img-fluid" src="{{url_for('static', filename='images/library.jpg')}}" alt="alternative">
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>US NEWS WEBSCRAPING</h3>
+                <hr class="line-heading">
+                <h6>Skills: Python, Webscraping</h6>
+                <p>Wrote a webscraping script that allowed me to scrape US News College Ranking website and collect data on school's rankings, enrollment numbers, tuition costs, etc. This data that was collected can then be used in future projects.</p>
+                <a class="btn-solid-reg" href="https://github.com/gchickering21/Webscraping">CODE</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+
+<!-- Lightbox 5 -->
+    <div id="project-5" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <img class="img-fluid" src="{{url_for('static', filename='images/amherst-college.jpg')}}" alt="alternative">
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>HISTORY OF AMHERST</h3>
+                <hr class="line-heading">
+                <h6>Skills: R, Sentiment Analysis, Dashboard</h6>
+                <p>Group project where we performed sentiment analysis to analyze text discover insights from the book entitled <i> History of Amherst College during the First Half Century</i>. We also built an R Shiny App to build off the other insights we found from the text.</p>
+                
+                <p>Contributors: Clara Seo</p>
+                
+                <a class="btn-solid-reg" href="https://github.com/gchickering21/HistoryOfAmherst">CODE</a> <a class="btn-solid-reg" href="https://gchickering21.shinyapps.io/ShinyApp/">Shiny App</a>
+                <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+
+    <!-- Lightbox 6-->
+    <div id="project-6" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <img class="img-fluid" src="{{url_for('static', filename='images/school.jpg')}}"  alt="alternative">
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>Grad School Admissions</h3>
+                <hr class="line-heading">
+                <h6>Skills: Python, Machine Learning</h6>
+                <p>For this project I focused on comparing multiple different machine learning algorithms to see which model would do the best job of predicting of who would get into graduate school. The models I chose to compare were a logistic regression model, a support vector machine model, and a decision tree model on my dataset.</p>
+                <a class="btn-solid-reg" href="https://github.com/gchickering21/Grad_School_Admissions">CODE</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+
+    <!-- Lightbox 7 -->
+    <div id="project-7" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <img class="img-fluid" src="{{url_for('static', filename='images/microscope.jpg')}}" alt="alternative">
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>CANCER TYPE PREDICTION</h3>
+                <hr class="line-heading">
+                <h6>SKILLS: R, Machine Learning </h6>
+                <p>Group project where we tried to predict cancer types based on RNA expressions. We performed both supervised and unsupurvised learning  technqiues to see which would do the best job of predicting different cancer types. </p>
+                
+                 <p>Contributors: John Festa, Arnav Parikh</p>
+            
+                <a class="btn-solid-reg" href="https://github.com/gchickering21/Cancer_Type_Prediction">CODE</a>
+                <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+
+ <!-- Lightbox 8 -->
+    <div id="project-8" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <img class="img-fluid" src="{{url_for('static', filename='images/street.jpg')}}" alt="alternative">
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>Building a Data Package</h3>
+                <hr class="line-heading">
+                <h6>SKILLS: R, Data Package </h6>
+                <p>Built a data package containing Information on 2019 political candidates that can be downloaded from Github.</p>
+                <a class="btn-solid-reg" href="https://github.com/gchickering21/PoliticalCandidates2019">CODE</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+
+    <!-- end of lightbox -->
+    <!-- end of project lightboxes -->
+
+{% endblock %}
